@@ -1,15 +1,85 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<meta charset="UTF-8"> 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-	<meta name="author" content="LUIS ROBERTO">
-	<LINk REL="SHORTCUT ICON" href="https://cdn.pixabay.com/photo/2021/07/02/04/48/check-6380867_1280.png" type="IMAGE/X-ICON">
-	<title>MENU PRINCIPAL</title> 	
-	<style>
-		html {
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <LINk REL="SHORTCUT ICON" href="https://cdn.pixabay.com/photo/2021/07/02/04/48/check-6380867_1280.png" type="IMAGE/X-ICON">
+    <title>METAS</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("https://cdn.pixabay.com/photo/2018/08/23/07/35/new-year-background-3625405_1280.jpg"); 
+  font-family: "Montserrat";    
+  display: flex;
+  height: 100vh;  
+  justify-content: center;
+  align-items: center;  
+  background-size: cover;
+  background-position: center;  
+}
+.cla {  
+  background-color: white;
+  padding: 50px;
+  border-radius: 30px;  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+h1 {
+  font-size: 24px;
+}
+button {
+  padding: 10px;
+  align-self: center;
+  width: 160px;
+  border-radius: 30px;  
+  background-image: linear-gradient(#256a8a, #3393c1);
+  border: solid 1px #256a8a;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1f1;
+}
+a {
+  color: #009dff;
+}
+.barra-horizontal {
+  background-color: #f87842;
+  height: 5px;
+  width: 210px;
+}
+.campo-input {
+  /* flex container */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lembrar-me {
+  /* flex container */
+  display: flex;
+  gap: 5px;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.esqueceu-senha {
+  text-align: center;
+}
+html {
     box-sizing: border-box;
     font-size: 16px;
   }  
@@ -83,24 +153,134 @@ ol, ul {
 .third:hover {
     box-shadow: 0 0 10px 0 #b81613 inset, 0 0 10px 4px #b81613;
 }
-	</style>		
-</head>
-<body >
-<div>
-    <a><button style="display: none; width: 18px;border-radius: 25%;" id="b1" onclick="ab()"><img  src="https://cdn-icons-png.flaticon.com/128/2311/2311552.png"    ></a>
-</div>
-
-	<nav  class="menu" id="d1">
-	<ul  style="position:relative;left: 1px;TOP:5PX;">
+.esconder {
+    display: none;
+}
+</style>
+  </head>
+  <body>
+    
+   <div>
+    <a><button style="display: none; width: 18px;border-radius: 25%;" id="b1" onclick="ab()"><img  src="https://cdn-icons-png.flaticon.com/128/2311/2311552.png"></a>
+</div> 
+      <nav  class="menu" id="d1">
+        <div class="esconder"  id="tg" >
+<ul  style="position:relative;left: 1px;TOP:5PX;">
         <li><a><button style=" width: 30px;border-radius: 25%;" id="b1" onclick="fec()"><img src="https://cdn-icons-png.flaticon.com/128/2311/2311552.png"  width="15px"  id="imh"></a></li>
-		
-    <li><A href="https://docs.google.com/spreadsheets/d/1AKi3edzWvuHemz3Q_2qe6xEJPGaRehmU5rQ7DKVn_ZE/edit?usp=sharing"  target="meu_iframe" ><button class="third" >METAS ATUALIZAÇÃO</button></A></li>    
-		<li><A href="https://drive.google.com/drive/folders/1-c4VFn95q_be_QfS7IXewil-U7HUt9G0?usp=sharing"  target="_BLANK" ><button class="third" >METAS VENDEDORES INDIVIDUAL</button></A></li>     		 
-</NAV>
+		<li><A><button class="third" onclick="carregaa()" >METAS ATUALIZAÇÃO</button></A></li>
+    <li><A><button class="third" onclick="carregac()">METAS INDIVIDUAIS</button></A></li>    
+			
+    </div>		 
+
+
+
+
+
+
+
+        <div class="cla"  id="d2">
+          <div >
+            <label for="">Loja</label>
+            <input type="text" id="loja" class="form-control">
+        </div>
+        <div >
+            <label for="">Usuario</label>
+            <input type="text" id="usuario" class="form-control">
+        </div>
+
+        <div >
+            <label for="">Senha</label>
+            <input type="password" id="senha" class="form-control">
+        </div>
+
+        <div >
+            <button class="btn btn-success form-control" id="btnLogar" onclick="">Logar</button>
+        </div>
+        </div>
+      </nav>
+
+    
 <IFrame  id="okj" width= 90% style= "height: 98vh;" src="https://cdn.pixabay.com/photo/2014/09/21/14/39/surface-455124_1280.jpg" name="meu_iframe" title="DEMONSTRATIVO DAS PAGINAS" 
 ></IFrame>
-<script src="VAR.JS"></script>
-</body>
+
+
+
+    
+}
+
+
+    <script src="valida.js"></script>
+    <script>
+      
+    const el1 = document.getElementById("tg");
+    const el2 = document.getElementById("d2");
+    let botao = document.getElementById('btnLogar')
+
+      botao.addEventListener('click', function logar(){
+      
+          let pegaLoja = document.getElementById('loja').value
+          let pegaUsuario = document.getElementById('usuario').value
+          let pegaSenha = document.getElementById('senha').value
+          let validalogin=false
+      
+          for(let i in usuarios){
+      
+              if(pegaLoja==usuarios[i].und && pegaUsuario == usuarios[i].login && pegaSenha==usuarios[i].pass){
+                 
+                  validalogin=true
+                 const a=usuarios[i].linkd
+                 const b=usuarios[i].linkdb
+                 const c=usuarios[i].linkdc
+                 document.getElementById('loja').value=a
+                document.getElementById('usuario').value=b
+                document.getElementById('senha').value=c
+                
+              }
+      
+          }
+      if(validalogin==true) {
+          alert('ok')
+          
+           el1.classList.remove("esconder");
+            el2.classList.add("esconder");
+      }else{
+          alert('USUARIO E/OU SENHA INCORRETO') 
+         
+      }
+      
+      })
+      
+      </script>
+      <SCRIPT>
+        function carregaa(){
+          const iframe = document.getElementById('okj');
+          iframe.src =document.getElementById('loja').value        
+        }
+        function carregab(){
+          const iframe = document.getElementById('okj');
+          iframe.src =document.getElementById('usuario').value        
+        }
+        function carregac(){
+          //const iframe = document.getElementById('okj');
+          //iframe.src =document.getElementById('senha').value    
+          //location.href =document.getElementById('senha').value
+          window.open(document.getElementById('senha').value, "_blank")
+          
+        }
+    function fec(){
+document.getElementById("d1").style.display="none";
+document.getElementById("okj").style.width="100%";
+document.getElementById("b1").style.display="inline-block";
+}
+function ab(){
+    document.getElementById("d1").style.display="inline-block";
+document.getElementById("okj").style.width="90%";
+document.getElementById("b1").style.display="none";
+}   
+</SCRIPT>
+  </body>
+
+
 </html>
 
 
@@ -108,6 +288,7 @@ ol, ul {
                       
    
     
+
 
 
 
